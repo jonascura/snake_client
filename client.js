@@ -11,7 +11,7 @@ const connect = function () {
   conn.setEncoding("utf8");
   
   conn.on("connect", () => {
-    console.log(`Name: SNK`);
+    conn.write(`Name: SNK`);
   });
 
   return conn;
