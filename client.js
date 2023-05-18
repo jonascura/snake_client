@@ -11,7 +11,7 @@ const connect = function () {
   conn.setEncoding("utf8");
   
   conn.on("connect", () => {
-    console.log("Server kicked you out due to inactivity.")
+    console.log(`Name: SNK`);
   });
 
   return conn;
