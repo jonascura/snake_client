@@ -16,7 +16,17 @@ const connect = function() {
 
   socket.on("connect", () => {
     socket.write(`Name: SNK`);
+
     console.log("Connected to server!");
+
+    setInterval(() => {
+      socket.write("Say: No biggie");
+    }, 24598);
+
+    setInterval(() => {
+      socket.write("Say: This is easy");
+    }, 65678);
+
   });
 
   /*
@@ -28,10 +38,6 @@ const connect = function() {
   return socket;
   
 };
-
-console.log("Connecting ...");
-
-// connect();
 
 module.exports = {
   connect
