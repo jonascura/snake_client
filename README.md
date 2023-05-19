@@ -8,7 +8,12 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["screenshot description"](#)
+!["git clone https://github.com/lighthouse-labs/snek-multiplayer.git
+cd snek-multiplayer
+
+# install and run via npm
+npm install
+npm run play"](#)
 !["screenshot description"](#)
 
 
