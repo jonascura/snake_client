@@ -2,16 +2,16 @@ const handleUserInput = function(key) {
   // code written from office hours visit
   switch (key) {
   case "w":
-    process.stdin.write("Move: up");
+    socket.write("Move: up");
     break;
   case "a":
-    process.stdin.write("Move: left");
+    socket.write("Move: left");
     break;
   case "s":
-    process.stdin.write("Move: down");
+    socket.write("Move: down");
     break;
   case "d":
-    process.stdin.write("Move: right");
+    socket.write("Move: right");
     break;
   case "\u0003":
     case "q":
@@ -24,7 +24,10 @@ const handleUserInput = function(key) {
 
 };
 
-const setupInput = function() {
+let socket;
+
+const setupInput = (connection) => {
+  socket = connection;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
