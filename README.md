@@ -8,8 +8,9 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-![Screenshot 2023-05-19 145817](https://github.com/jonascura/snake_client/assets/103337561/5771b615-789c-4168-a5c4-40d91f29bdd1)(#)
-![Screenshot 2023-05-19 145817](https://github.com/jonascura/snake_client/assets/103337561/82eb8576-5253-49f5-81a1-b4df93f31bfa)(#)
+![Screenshot 2023-05-19 145817](https://github.com/jonascura/snake_client/assets/103337561/5771b615-789c-4168-a5c4-40d91f29bdd1)
+![Screenshot 2023-05-19 142909](https://github.com/jonascura/snake_client/assets/103337561/be4f2cae-c0b5-4fa4-bd1d-cf3236c26c73)
+
 
 
 ## Getting Started
