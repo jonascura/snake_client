@@ -1,20 +1,25 @@
+const { UP_KEY, LEFT_KEY, DOWN_KEY, RIGHT_KEY, TAUNT_KEY, QUIT_KEY, taunt } = require("./constants");
+
 const handleUserInput = function(key) {
   // code written from office hours visit
   switch (key) {
-  case "w":
+  case UP_KEY:
     socket.write("Move: up");
     break;
-  case "a":
+  case LEFT_KEY:
     socket.write("Move: left");
     break;
-  case "s":
+  case DOWN_KEY:
     socket.write("Move: down");
     break;
-  case "d":
+  case RIGHT_KEY:
     socket.write("Move: right");
     break;
+  case TAUNT_KEY:
+    socket.write(`Say: ${taunt}`);
+    break;
   case "\u0003":
-    case "q":
+    case QUIT_KEY:
     process.exit();
     break;
   default:
