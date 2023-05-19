@@ -2,16 +2,21 @@ const net = require("net");
 
 // establishes connection with game server
 const connect = function() {
-  const conn = net.createConnection({
+  const socket = net.createConnection({
     host: "localhost",
     port: 50541
   });
 
   // interperate the data as text
-  conn.setEncoding("utf8");
-  
-  conn.on("connect", () => {
-    conn.write(`Name: SNK`);
+  socket.setEncoding("utf8");
+
+  socket.on("data", (data) => {
+    console.log("Server says:", data);
+  });
+
+  socket.on("connect", () => {
+    socket.write(`Name: SNK`);
+    console.log("Connected to server!");
   });
 
   /*
@@ -20,13 +25,13 @@ const connect = function() {
   });
   */
  
-  return conn;
+  return socket;
   
 };
 
 console.log("Connecting ...");
 
-connect();
+// connect();
 
 module.exports = {
   connect
