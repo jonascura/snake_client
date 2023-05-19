@@ -1,10 +1,11 @@
 const net = require("net");
+const { IP, PORT, name, message1, message2 } = require("./constants");
 
 // establishes connection with game server
 const connect = function() {
   const socket = net.createConnection({
-    host: "localhost",
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   // interperate the data as text
@@ -14,27 +15,21 @@ const connect = function() {
     console.log("Server says:", data);
   });
 
+// displays commands upon connection
   socket.on("connect", () => {
-    socket.write(`Name: SNK`);
-
+    socket.write(`Name: ${name}`);
     console.log("Connected to server!");
 
     setInterval(() => {
-      socket.write("Say: No biggie");
+      socket.write(`Say: ${message1}`);
     }, 24598);
 
     setInterval(() => {
-      socket.write("Say: This is easy");
+      socket.write(`Say: ${message2}`);
     }, 65678);
 
   });
 
-  /*
-  conn.on("connect", () => {
-    conn.write(`Move: up`);
-  });
-  */
- 
   return socket;
   
 };
