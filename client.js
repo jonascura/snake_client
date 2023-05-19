@@ -18,8 +18,9 @@ const connect = function() {
 // displays commands upon connection
   socket.on("connect", () => {
     socket.write(`Name: ${name}`);
-    console.log("Connected to server!");
+    console.log("connected...");
 
+    // says messages on set intervals
     setInterval(() => {
       socket.write(`Say: ${message1}`);
     }, 24598);
